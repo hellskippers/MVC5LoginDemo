@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginPage</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("CheckLogin", "Login", FormMethod.Post))
+        {
+        <table>
+            <tr>
+                <td colspan="2" style="text-align:center">Hellskippers login page</td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" name="Username" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="text" name="Password" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <button>Login</button>    
+                </td>
+            </tr>
+        </table>
+        }
+        <label style="color:red">@ViewBag.ErrorMsg</label>
+    </div>
+</body>
+</html>
